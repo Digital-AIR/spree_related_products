@@ -4,7 +4,7 @@ module Spree
       class RelationSerializer < BaseSerializer
         set_type :relation
 
-        attributes :relation_type, :relatable, :related_to
+        has_one :related_to, serializer: :related_to_product
 
       end
     end
