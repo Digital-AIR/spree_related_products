@@ -4,7 +4,7 @@ module Spree
       class RelatedToProductSerializer < BaseSerializer
         set_type :related_to_product
 
-        attributes :name, :meta_description
+        attributes :name, :meta_description, :slug
 
         has_many :images,
                  object_method_name: :variant_images,
